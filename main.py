@@ -1,22 +1,16 @@
-#Importing modules
+#importing modules
 from tkinter import *
 from tkinter import ttk
 
-#Main Window
+#main window
 root = Tk()
 root.title("MWWP")
 
-frame = Frame(root)
-labelText = StringVar()
+Label(root, text="Choose image to classify").grid(row=1,column=1, sticky=W, padx=5)
+Button(root, text="Import").grid(row=2, column=1)
 
-label = Label(frame, textvariable=labelText)
-button = Button(frame, text="Import")
-
-labelText.set("Choose image to classify")
-
-#Geometry manager, defines how your components are arranged
-label.pack()
-button.pack()
-frame.pack()
+Label(root, text="Begin the process").grid(row=1, column=2, sticky=W, padx=5)
+Button(root, text="Import").grid(row=2, column=2)
 
 root.mainloop()
+
